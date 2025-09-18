@@ -64,7 +64,7 @@
         .tagline {
             font-size: 1.2rem;
             color: #a29bfe;
-            margin-bottom: 30px;
+            margin-bottom: 5px;
         }
 
         .download-box {
@@ -130,19 +130,8 @@
             margin-right: 20px;
             object-fit: cover;
         }
-
-        .creator {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .creator img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+        
+        /* The creator class has been removed */
 
         .download-options {
             display: grid;
@@ -246,6 +235,13 @@
                 border-radius: 8px;
                 margin-bottom: 10px;
             }
+            .input-group input:focus {
+    outline: none;
+    border: 2px solid #6c5ce7;
+    box-shadow: 0 0 10px #6c5ce7;
+    background: rgba(255, 255, 255, 0.2);
+}
+
             
             .input-group button {
                 border-radius: 8px;
@@ -294,10 +290,6 @@
                     <div class="video-info">
                         <img src="" alt="Thumbnail" class="thumbnail" id="thumbnail">
                         <div>
-                            <div class="creator">
-                                <img src="" alt="Profile" id="profile-pic">
-                                <span id="creator-name">Creator</span>
-                            </div>
                             <p>Select download option below:</p>
                         </div>
                     </div>
@@ -316,7 +308,7 @@
                 </div>
             </div>
             
-            <a href="https://whatsapp.com/channel/0029Vay16NVJENy6op6dBV3B" class="whatsapp-btn" target="_blank">
+            <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">
                 <i class="fab fa-whatsapp"></i> Join our WhatsApp Channel
             </a>
         </main>
@@ -388,8 +380,8 @@
                     if (data.success) {
                         // Update UI with video data
                         document.getElementById('thumbnail').src = data.results.thumbnail;
-                        document.getElementById('profile-pic').src = data.results.pp_user;
-                        document.getElementById('creator-name').textContent = data.creator;
+                        
+                        // The lines to display creator info have been removed.
                         
                         // Set download links
                         document.getElementById('no-watermark-btn').href = data.results.no_watermark;
@@ -408,4 +400,5 @@
         });
     </script>
 </body>
-</html>
+        </html>
+    
