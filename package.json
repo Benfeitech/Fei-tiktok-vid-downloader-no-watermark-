@@ -1,0 +1,26 @@
+{
+  "name": "tiktok-downloader",
+  "version": "1.0.0",
+  "description": "A TikTok video downloader website without watermark",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && vercel --prod"
+  },
+  "keywords": [
+    "tiktok",
+    "downloader",
+    "watermark-removal",
+    "video-downloader"
+  ],
+  "author": "Benfei Tech",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}
